@@ -1,0 +1,14 @@
+.github/
+.vscode/
+src/
+tests/
+node_modules/
+
+.eslintignore
+.eslintrc
+.prettierrc
+
+Dockerfile
+package-lock.json
+tsconfig.json
+publish.sh
