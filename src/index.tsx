@@ -1,4 +1,5 @@
-import './tailwind.css'
+import './tailwind.css';
 
-export { Button } from './Button'
-export { Radio } from './Radio'
+export { TailUiContext, TailUiConsumer, TailUiProvider } from './Context';
+export { Button } from './Button';
+export { Radio } from './Radio';
