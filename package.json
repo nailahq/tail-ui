@@ -30,9 +30,6 @@
     "url": "https://github.com/nailahq/tail-ui/issues"
   },
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "peerDependencies": {
     "react": "^17.0.0"
   },
