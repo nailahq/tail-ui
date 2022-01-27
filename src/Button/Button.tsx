@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TailUiContext } from '../Context';
 import { ITailUiTheme } from '../Context/default-theme';
-import Loader from './Loader.svg';
+import { GrowLoader } from '../Grow-loader';
 interface IVariants {
   primary: string;
   secondary: string;
@@ -49,7 +49,7 @@ export default class Button extends Component<IButton> {
 
     return (
       <button type={type} className={classname} disabled={disabled} onClick={onClick}>
-        <img src={Loader} /> {children}
+        {children}
       </button>
     );
   }

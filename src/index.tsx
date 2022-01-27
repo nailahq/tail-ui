@@ -1,5 +1,5 @@
 import './tailwind.css';
-import './Button/Loader.svg';
+// import './Button/Loader.svg';
 
 export { TailUiContext, TailUiConsumer, TailUiProvider } from './Context';
 export { Button } from './Button';
