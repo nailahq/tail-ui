@@ -2,10 +2,10 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   purge: {
     enabled: process.env.NODE_ENV === 'publish',
-    content: ['./src/**/*.{js,jsx,ts,tsx}']
+    content: ['./src/**/*.{js,jsx,ts,tsx}'],
   },
   darkMode: false, // or 'media' or 'class'
-    theme: {
+  theme: {
     extend: {
       boxShadow: {
         DEFAULT: '0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.02)',
@@ -70,5 +70,5 @@ module.exports = {
       pointerEvents: ['disabled'],
     },
   },
-  plugins: []
-}
+  plugins: [],
+};

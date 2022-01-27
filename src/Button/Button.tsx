@@ -30,14 +30,12 @@ export default class Button extends Component<IButton> {
   static contextType: React.Context<any> | undefined = TailUiContext;
 
   render() {
-    console.log('this.context');
-    console.log(this.context);
     const { primaryColor } = this.context;
 
     const variants: IVariants = {
       primary: `bg-${primaryColor}-600 text-white hover:bg-${primaryColor}-700`,
       secondary: 'bg-green-400 text-white hover:bg-green-500',
-      primaryGhost: 'bg-transparent text-indigo-600 border border-indigo-600',
+      primaryGhost: `bg-transparent text-${primaryColor}-600 border border-${primaryColor}-600`,
     };
     const { children, onClick, block, disabled, rounded, type, variant } = this.props;
     const buttonVariant = variant || 'primary';

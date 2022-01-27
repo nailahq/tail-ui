@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 export default function Radio(props: IRadio) {
-  const { labelPosition = 'right', id, name, label, checked, onChange } = props
+  const { labelPosition = 'right', id, name, label, checked, onChange } = props;
 
   return (
     <div className='inline-flex items-center'>
@@ -25,14 +25,14 @@ export default function Radio(props: IRadio) {
         </label>
       )}
     </div>
-  )
+  );
 }
 
 export interface IRadio {
-  label?: React.ReactNode
-  id: string
-  name: string
-  labelPosition?: 'left' | 'right'
-  onChange?: () => void
-  checked?: boolean
+  label?: React.ReactNode;
+  id: string;
+  name: string;
+  labelPosition?: 'left' | 'right';
+  onChange?: () => void;
+  checked?: boolean;
 }

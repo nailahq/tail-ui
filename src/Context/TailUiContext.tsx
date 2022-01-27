@@ -1,9 +1,9 @@
-import React from 'react'
-import { DefaultTheme } from './default-theme'
+import React from 'react';
+import { DefaultTheme } from './default-theme';
 
-const TailUiContext = React.createContext(DefaultTheme)
+const TailUiContext = React.createContext(DefaultTheme);
 
-export const TailUiProvider = TailUiContext.Provider
-export const TailUiConsumer = TailUiContext.Consumer
+export const TailUiProvider = TailUiContext.Provider;
+export const TailUiConsumer = TailUiContext.Consumer;
 
-export default TailUiContext
+export default TailUiContext;
