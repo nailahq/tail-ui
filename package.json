@@ -1,6 +1,6 @@
 {
   "name": "@nailahq/tail-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React Tailwind Component Library",
   "author": "Arpit Yadav",
   "main": "dist/index.js",
