@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TailUiContext } from '../Context';
-
+import { ITailUiTheme } from '../Context/default-theme';
+import Loader from './Loader.svg';
 interface IVariants {
   primary: string;
   secondary: string;
@@ -13,6 +14,7 @@ interface IButton {
   rounded?: boolean;
   block?: boolean;
   disabled?: boolean;
+  loading?: boolean;
   onClick: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
@@ -25,19 +27,20 @@ export default class Button extends Component<IButton> {
     disabled: false,
     onClick: () => {},
     type: 'button',
+    loading: false,
   };
 
-  static contextType: React.Context<any> | undefined = TailUiContext;
+  static contextType: React.Context<ITailUiTheme> = TailUiContext;
 
   render() {
-    const { primaryColor } = this.context;
+    const { primaryColor, secondaryColor } = this.context;
+    const { children, onClick, block, disabled, rounded, type, variant } = this.props;
 
     const variants: IVariants = {
       primary: `bg-${primaryColor}-600 text-white hover:bg-${primaryColor}-700`,
-      secondary: 'bg-green-400 text-white hover:bg-green-500',
+      secondary: `bg-${secondaryColor}-400 text-white hover:bg-${secondaryColor}-500`,
       primaryGhost: `bg-transparent text-${primaryColor}-600 border border-${primaryColor}-600`,
     };
-    const { children, onClick, block, disabled, rounded, type, variant } = this.props;
     const buttonVariant = variant || 'primary';
 
     const classname = `${variants[buttonVariant]} ${rounded ? 'rounded-full' : 'rounded'} ${
@@ -46,7 +49,7 @@ export default class Button extends Component<IButton> {
 
     return (
       <button type={type} className={classname} disabled={disabled} onClick={onClick}>
-        {children}
+        <img src={Loader} /> {children}
       </button>
     );
   }

@@ -9,6 +9,7 @@ const Home = () => {
           onClick={() => {
             console.log('test');
           }}
+          loading={true}
         >
           Button
         </Button>

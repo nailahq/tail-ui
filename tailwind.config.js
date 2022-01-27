@@ -68,6 +68,7 @@ module.exports = {
       backgroundColor: ['disabled'],
       cursor: ['disabled'],
       pointerEvents: ['disabled'],
+      animation: ['group-hover'],
     },
   },
   plugins: [],

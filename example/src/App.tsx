@@ -4,6 +4,7 @@ import Home from './Home';
 import { TailUiContext } from '@nailahq/tail-ui/dist';
 const theme = {
   primaryColor: 'blue',
+  secondaryColor: 'indigo',
 };
 const App = () => {
   return (
